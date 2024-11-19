@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlock It</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h3>Unlockl It</h3>
+    </header>
+    <div class="MainContainer">
+        <div class="choosesContainer">
+            <Select>
+                <option value="Encrypt">Encrypt</option>
+                <option value="Decrypt">Decrypt</option>
+            </Select>
+        </div>
+        <div class="formulaContainer">
+            <p>y = </p>
+            <input type="text" id="multiplier">
+            <p>x</p>
+            <input type="text" id="operation">
+            <input type="text" id="shift">
+            <p>mod</p>
+            <input type="text" id="mod">
+        </div>
+        <div class="Encrypted-Decrypted-Text">
+            <div class="texttodecrypEncrypt">
+                <input type="text" id="texttodecrypt" placeholder="Enter Text Here">
+            </div>
+            <div class="encrypDecrypValue">
+                <p></p>
+            </div>
+            <button class="btnSubmit">Encrypt</button>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
