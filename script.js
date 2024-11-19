@@ -25,6 +25,7 @@ let decryption = () => {
     shift = parseInt(shift.value)
     operator = operator.value
     texttodecrypt = texttodecrypt.value
+    texttodecrypt = texttodecrypt.toLowerCase()
 
     while(multiplicative < mod){
         if(multiplier * multiplicative % mod == 1){
