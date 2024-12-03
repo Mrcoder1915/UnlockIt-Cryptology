@@ -1,3 +1,5 @@
+let choosesContainer = document.querySelector(".choosesContainer select")
+let btnsubmit = document.querySelector(".btnSubmit")
 let alphaValueObj = {}
 let numberValueObj = {}
 
@@ -7,9 +9,14 @@ for(let i = 1;i <= 26;i++){
 for(let i = 1;i <= 26;i++){
    alphaValueObj[i] = String.fromCharCode(96 + i)
 }
+const btnchage = () => {
+    choosesContainer.value === "Decrypt"? btnsubmit.textContent = "Decrypt" : btnsubmit.textContent = "Encrypt"
+}
+btnchage()
+choosesContainer.addEventListener("change", btnchage)
 
 let decryption = () => {
-    let choosesContainer = document.querySelector(".choosesContainer select")
+
     let multiplier = document.getElementById("multiplier")
     let operator = document.getElementById("operation")
     let shift = document.getElementById("shift")
@@ -61,6 +68,6 @@ let decryption = () => {
     }
 
 }
-let btnsubmit = document.querySelector(".btnSubmit")
+
 
 btnsubmit.addEventListener("click", decryption)
